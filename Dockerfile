@@ -10,6 +10,10 @@ RUN set -ex \
     && cd /code \
     && git clone https://github.com/ochinchina/supervisord \
     && cd /code/supervisord \
+    && go mod download
+
+RUN set -ex \
+    && cd /code/supervisord \
     && go build -tags release -a -o supervisord
 
 FROM alpine:latest
