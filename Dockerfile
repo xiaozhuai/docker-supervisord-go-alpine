@@ -8,7 +8,7 @@ RUN apk --no-cache add git gcc
 RUN set -ex \
     && mkdir /code \
     && cd /code \
-    && git clone https://github.com/ochinchina/supervisord \
+    && git clone --depth=1 "https://github.com/ochinchina/supervisord" \
     && cd /code/supervisord \
     && go mod download
 
