@@ -14,7 +14,7 @@ RUN set -ex \
 
 RUN set -ex \
     && cd /code/supervisord \
-    && go build -tags release -a -o supervisord
+    && go build -tags release -a -o -ldflags "-s -w" supervisord
 
 FROM alpine:latest
 
