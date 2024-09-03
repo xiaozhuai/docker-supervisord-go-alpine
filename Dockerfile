@@ -1,7 +1,7 @@
 FROM golang:alpine AS builder
 
-ENV GO111MODULE on
-ENV CGO_ENABLED 0
+ENV GO111MODULE=on
+ENV CGO_ENABLED=0
 
 RUN apk --no-cache add git gcc
 
